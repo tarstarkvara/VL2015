@@ -3,17 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<title>UT valimised</title>
 </head>
 <body>
-	<a href="kandidatuur.html">
-		<h2> Kandidaadid </h2>
-	</a>
-	<a href="kandidatuur.html">
-		<h2> Hääletama </h2>
-	</a>
-	<a href="kandidatuur.html">
-		<h2> Tulemus </h2>
-	</a>
+	<div id="küsitlused">
+		<a href="index.html" id="home"><img src="UT_logo.png" alt="Home"></a>
+		<ul id="sidebar">
+			<li><a href="kandidatuur.html">Kandidaadid</a></li>
+			<li><a href="hääletamine.html">Hääletama</a></li>
+			<li><a href="tulemused.html">Tulemused</a></li>
+			<li><a href="index.html">Logi välja</a></li>
+		</ul>
+		<div class="tabContent">
+			<form>
+				<h3>Hääletusel olev küsimus: </h3>
+				<input type="text" name="pealkiri" onkeydown="pressEnter()" onchange="lisa();" size=40>
+				<input type="submit" name="lisa" value="Lisa" onclick="lisa();">
+			</form>
+		</div>
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>
