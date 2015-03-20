@@ -30,7 +30,8 @@
 #watermark{ position:fixed; left: 13%; top: -15%; opacity:0.06; z-index:-1; background-position:center;}
 body { font-size: 80%; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;}
 
-
+#ankeet{display:none; margin: 15% 0 0 40%; list-style-type: none; }
+#ankeet li {margin: 5px;}
 
 
 

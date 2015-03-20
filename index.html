@@ -8,6 +8,7 @@
 <body>
 	
 	<div id="watermark"><img src="ut_wm.png"/></div>
+	
 	<div id="menu">
 		<div class="valik">
 			<a href="kandidatuur.html">
@@ -28,10 +29,27 @@
 	<ul id="login">
 		<li><a href="kandidatuur.html">LOGI SISSE</a></li>
 		<li><a href="haaletamine.html">ID KAART</a></li>
+		<li><a href="#" onClick="hideMenu()">REGISTREERU</a></li>
 	</ul>
 	<form id="otsing">
 		<input type="image" src="otsing.png" alt="Submit">
 		<input type="text" name="otsingTxt" size=65>
 	</form>
+	<form id="registreering">
+		<ul id="ankeet">
+			<li>Eesnimi:</li>
+			<input type="text" name="eesnimi" size=20>
+			<li>Perenimi:</li>
+			<input type="text" name="perenimi" size=20>
+			<li>Isikukood:</li>
+			<input type="text" name="isikukood" size=20>
+			<li>Kasutajanimi:</li>
+			<input type="text" name="kasutajanimi" size=20>
+			<li>Parool:</li>
+			<input type="password" name="parool" size=20>
+			<li><input type="submit" name="Saada" onClick="showMenu()"></li>
+		</ul>
+	</form>
+	<script src="script.js"></script>
 </body>
 </html>
