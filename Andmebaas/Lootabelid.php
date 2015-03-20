@@ -1,5 +1,5 @@
 <?php
-include_once 'taskmodel.php';
+include_once 'connect.php';
 $conn = connect();
 $sql = "CREATE TABLE isik(
 			id INT NOT NULL AUTO_INCREMENT, 
