@@ -17,6 +17,9 @@ $sql = "CREATE VIEW v_tulemas_haaletus AS SELECT id,nimi FROM haaletus group by 
 
 $sql = "CREATE VIEW v_haaletanuid AS SELECT haaletus.nimi, COUNT(*) FROM haal JOIN haaletus ON
 	haal.haaletuse_id=haaletus.haaletuse_id GROUP BY haaletus.nimi";
+	
+$sql = "CREATE VIEW v_haalte_jaotus AS SELECT kandidaadi_id, haaletuse_id, COUNT(*) FROM haal GROUP BY 
+	kandidaadi_id,haaletuse_id";
 
 try{
 	$conn->query($sql);
