@@ -66,6 +66,16 @@ function isikuTulemused($kandidaadi_id)
 	$stmt->bindValue(1, $kandidaadi_id);
 	$stmt->execute();
 }
+
+function kandidaadiHaaletused($kandidaadi_id)
+{
+	$conn = connect();
+	$sql = "SELECT * FROM v_kandidaadi_haaletused WHERE kandidaadi_id = ?";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $kandidaadi_id);
+	$stmt->execute();
+}
+
 function isikuTulemused_Haaletusel($kandidaadi_id, $haaletuse_id)
 {
 	$conn = connect();
