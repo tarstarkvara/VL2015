@@ -47,4 +47,21 @@ function haaletuseTulem($nimi)
 	$stmt->bindValue(1, $nimi);
 	$stmt->execute();
 }
+function isikuTulemused($kandidaadi_id)
+{
+	$conn = connect();
+	$sql = "SELECT * FROM v_haalte_jaotus WHERE kandidaadi_id = ?";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $kandidaadi_id);
+	$stmt->execute();
+}
+function isikuTulemused_Haaletusel($kandidaadi_id, $haaletuse_id)
+{
+	$conn = connect();
+	$sql = "SELECT * FROM v_haalte_jaotus WHERE kandidaadi_id = ? AND haaletuse_id = ?";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $kandidaadi_id);
+	$stmt->bindValue(2, $haaletuse_id);
+	$stmt->execute();
+}
 ?>
