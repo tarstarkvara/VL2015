@@ -6,6 +6,10 @@ $sql = "CREATE VIEW v_haaletuse_kandidaadid AS SELECT kandidaat.kandidaadi_id,
         isik.nimi, isik.perenimi, kandidaat.haaletuse_id from 
         isik join kandidaat on isik.id=kandidaat.kandidaadi_id";
 
+$sql = "CREATE VIEW v_kandidaadi_haaletused AS SELECT kandidaat.kandidaadi_id, 
+        haaletus.nimi from kandidaat join haaletus on kandidaat.haaletuse_id=haaletus.id 
+        GROUP BY kandidaat.kandidaadi_id, haaletus.nimi";
+
 $sql = "CREATE VIEW v_kaimas_haaletus AS SELECT id,nimi FROM haaletus group by loppaeg,algusaeg,id,nimi 
         having algusaeg<current_timestamp and loppaeg>current_timestamp";
 
