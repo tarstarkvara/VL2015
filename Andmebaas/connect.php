@@ -38,4 +38,13 @@ function addHaaletus($algusaeg, $loppaeg, $nimi)
 	$stmt->bindValue(3, $nimi);
 	$stmt->execute();
 }
+
+function haaletuseTulem($nimi)
+{
+	$conn = connect();
+	$sql = "SELECT * FROM v_haaletanuid WHERE nimi = ?";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $nimi);
+	$stmt->execute();
+}
 ?>
