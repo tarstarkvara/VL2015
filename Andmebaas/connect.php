@@ -28,6 +28,17 @@ function addIsik($nimi, $perenimi, $isikukood, $kasutajanimi, $parool)
 	$stmt->execute();
 }
 
+function annaHaal($haaletuse_id, $kandidaadi_id, $haaletaja_id)
+{
+	$conn = connect();
+	$sql = "INSERT INTO haal(haaletuse_id,kandidaadi_id,haaletaja_id) VALUES (?, ?, ?)";
+	$stmt = $conn->prepare($sql);
+	$stmt->bindValue(1, $haaletuse_id);
+	$stmt->bindValue(2, $kandidaadi_id);
+	$stmt->bindValue(3, $haaletaja_id);
+	$stmt->execute();
+}
+
 function addHaaletus($algusaeg, $loppaeg, $nimi)
 {
 	$conn = connect();
