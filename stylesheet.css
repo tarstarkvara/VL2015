@@ -1,33 +1,33 @@
-.valik a:hover{background-color: lightblue;}
-.valik a{display: block; width: 200px; height: 200px; text-align: center; text-decoration: none; background-color:#223D9C; color: white;
-		border-radius: 0.5em; float: left; max-width: 60%; margin: 15% 0 5% 2%}
+.valik a:hover{background-color: #075dbd;}
+.valik a{display: block; width: 200px; height: 200px; text-align: center; text-decoration: none; background-color:#33098F; color: #FAFAFA;
+		border-radius: 0.5em; float: left; max-width: 60%; margin: 15% 0 5% 2%;}
 #menu{margin-left: 25%;}
 
 #otsing { clear: both; margin-left: 30%;}
 #login li{ list-style-type: none; width: 10%; float:left;}
-#login li a{ display: block; text-decoration: none; color: white; background-color: #223D9C; border-radius: 0.5em;
+#login li a{ display: block; text-decoration: none; color: white; background-color: #33098F; border-radius: 0.5em;
 		 text-align: center;  margin: 4px; padding: 0.5em;}
-#login a:hover { background-color: lightblue; }
+#login a:hover { background-color:#3A5FCD; }
 
 @media screen and (min-width:600px) {
 	#sidebar { list-style-type: none; float: left; width: 25%; padding: 0; }
-	#sidebar a{ display: block; width: 50%; background-color: #223D9C; color: white; padding: 6px; margin: 1em;	border-radius: 0.5em;
-		text-decoration: none; text-transform: uppercase; text-align: center; border: 1px solid black; }
-	#sidebar a:hover { background-color: lightblue; }
+	#sidebar a{ display: block; width: 50%; background-color: #33098F; color: white; padding: 6px; margin: 1em;	border-radius: 0.5em;
+		text-decoration: none; text-align: center; border: 1px solid black; }
+	#sidebar a:hover { background-color: #3A5FCD; }
 	#home {margin:3px;}
-	div.poll { padding: 0.5em; max-width: 60%; margin-left: 25%; margin-bottom: 3px; margin-top: 10px; border: 0.3em solid #223D9C; border-radius: 0.5em;}
+	div.poll { padding: 0.5em; max-width: 60%; margin-left: 25%; margin-bottom: 3px; margin-top: 10px; border: 0.3em solid #33098F; border-radius: 0.5em; background-color:white;}
 }
 @media screen and (max-width:599px) {
 	#sidebar li {
-		display: inline; background-color: #223D9C; padding: 6px; margin: 1em;	border-radius: 0.5em;
+		display: inline; background-color: #33098F; padding: 6px; margin: 1em;	border-radius: 0.5em;
 		text-decoration: none; text-transform: uppercase; text-align: center; border: 1px solid black;
 	}
 	#sidebar li a{color:white;}
-	#sidebar a:hover { background-color: lightblue; }
+	#sidebar a:hover { background-color: #3A5FCD; }
 	#home {margin:3px;}
-	div.poll { padding: 0.5em; max-width: 60%; margin-left: 25%; margin-bottom: 3px; margin-top: 10px; border: 0.3em solid #223D9C; border-radius: 0.5em;}
+	div.poll { padding: 0.5em; max-width: 60%; margin-left: 25%; margin-bottom: 3px; margin-top: 10px; border: 0.3em solid #33098F; border-radius: 0.5em; background-color:white;}
 }
-
+#watermark{ position:fixed; left: 13%; top: -15%; opacity:0.06; z-index:-1; background-position:center;}
 body { font-size: 80%; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;}
 
 
