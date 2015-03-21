@@ -7,8 +7,8 @@ $sql = "CREATE TABLE isik(
 			nimi VARCHAR(50),
 			perenimi VARCHAR(50),
 			isikukood INT,
-			kasutajanimi UNIQUE NOT NULL VARCHAR(50),
-			parool UNIQUE NOT NULL VARCHAR(50))";
+			kasutajanimi VARCHAR(50) UNIQUE NOT NULL,
+			parool VARCHAR(50) UNIQUE NOT NULL)";
 			
 $sql = "CREATE TABLE kandidaat(
 			kandidaadi_id INT NOT NULL, 
@@ -23,7 +23,7 @@ $sql = "CREATE TABLE haal(
 			haaletaja_id INT)";
 $sql = "CREATE TABLE haaletus(
 			haaletuse_id INT NOT NULL AUTO_INCREMENT, 
-			PRIMARY KEY(id),
+			PRIMARY KEY(haaletuse_id),
 			algusaeg DATE,
 			loppaeg DATE,
 			nimi VARCHAR(80))";
