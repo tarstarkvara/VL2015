@@ -42,7 +42,7 @@ function annaHaal($haaletuse_id, $kandidaadi_id, $haaletaja_id)
 function addHaaletus($algusaeg, $loppaeg, $nimi)
 {
 	$conn = connect();
-	$sql = "INSERT INTO isik (algusaeg, loppaeg, nimi) VALUES (?, ?, ?)";
+	$sql = "INSERT INTO haaletus (algusaeg, loppaeg, nimi) VALUES (?, ?, ?)";
 	$stmt = $conn->prepare($sql);
 	$stmt->bindValue(1, $algusaeg);
 	$stmt->bindValue(2, $loppaeg);
